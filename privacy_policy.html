@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Football Clashers</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #1a7a4a;
+    --green-light: #e8f5ee;
+    --green-dark: #0f5233;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --text-light: #888;
+    --border: #e0e0e0;
+    --bg: #ffffff;
+    --bg-alt: #f8f9fa;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+
+  .header-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+
+  .header h1 span {
+    color: #5dca9e;
+  }
+
+  .header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .header-meta {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .header-meta span {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .header-meta span::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5dca9e;
+  }
+
+  /* ── TOC ── */
+  .toc-wrap {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .toc {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+
+  .toc h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .toc ol {
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+
+  @media (max-width: 500px) { .toc ol { columns: 1; } }
+
+  .toc li { margin-bottom: 6px; break-inside: avoid; }
+
+  .toc a {
+    font-size: 14px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .toc a:hover { text-decoration: underline; }
+
+  /* ── Main content ── */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .section {
+    margin-bottom: 56px;
+    padding-top: 8px;
+  }
+
+  .section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  h2.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--green-light);
+    scroll-margin-top: 24px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  /* ── Data table ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 20px 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .data-table th {
+    background: var(--green-dark);
+    color: #fff;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--bg-alt); }
+
+  .data-table td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  /* ── Info boxes ── */
+  .info-box {
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 20px 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  .info-box.green {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    color: var(--green-dark);
+  }
+
+  .info-box.yellow {
+    background: #fffbea;
+    border-left: 4px solid #f59e0b;
+    color: #78350f;
+  }
+
+  .info-box.gray {
+    background: var(--bg-alt);
+    border-left: 4px solid #ccc;
+    color: var(--text-muted);
+  }
+
+  .info-box strong { color: inherit; }
+
+  /* ── Bullet lists ── */
+  ul.policy-list {
+    list-style: none;
+    margin: 14px 0;
+    padding: 0;
+  }
+
+  ul.policy-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  ul.policy-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+
+  /* ── Third party cards ── */
+  .third-party-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .third-party-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    background: var(--bg);
+  }
+
+  .third-party-card .vendor-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .third-party-card .vendor-role {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+
+  .third-party-card a {
+    font-size: 13px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .third-party-card a:hover { text-decoration: underline; }
+
+  /* ── Contact box ── */
+  .contact-box {
+    background: var(--green-dark);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  .contact-box h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  .contact-box p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
+  .contact-box a {
+    display: inline-block;
+    background: #5dca9e;
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  footer strong { color: var(--text-muted); }
+
+  /* ── Divider ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  @media (max-width: 600px) {
+    .data-table { font-size: 13px; }
+    .data-table th, .data-table td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="header">
+  <div class="header-badge">Legal &amp; Privacy</div>
+  <h1>Privacy <span>Policy</span></h1>
+  <p>Football Clashers — Live Scores, Predictions &amp; Challenges</p>
+  <div class="header-meta">
+    <span>Effective: June 1, 2026</span>
+    <span>Last updated: June 1, 2026</span>
+    <span>Version 1.0</span>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     TABLE OF CONTENTS
+══════════════════════════════════════════ -->
+<div class="toc-wrap">
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Sharing &amp; Third Parties</a></li>
+      <li><a href="#s4">Advertising &amp; AdMob</a></li>
+      <li><a href="#s5">FC Coins &amp; In-App Purchases</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights &amp; Choices</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Data Security</a></li>
+      <li><a href="#s10">International Transfers</a></li>
+      <li><a href="#s11">Changes to This Policy</a></li>
+      <li><a href="#s12">Contact Us</a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CONTENT
+══════════════════════════════════════════ -->
+<main class="content">
+
+  <div class="info-box green">
+    <strong>Your privacy matters.</strong> Football Clashers ("we", "us", or "our") is committed to being transparent about the data we collect and how we use it. This policy applies to our Android application <strong>Football Clashers</strong> (package: <strong>com.footballclashers.app</strong>) and any related services. Please read it carefully.
+  </div>
+
+  <!-- 1 -->
+  <div class="section" id="s1">
+    <div class="section-number">1</div>
+    <h2 class="section-title">Information We Collect</h2>
+
+    <h3>1.1 Information You Provide Directly</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data</th><th>When Collected</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Display name</td><td>Account creation / name change</td><td>Shown on profile, rankings, challenges</td></tr>
+        <tr><td>Profile photo</td><td>Google Sign-In (optional)</td><td>Avatar display throughout the app</td></tr>
+        <tr><td>Email address</td><td>Google Sign-In</td><td>Account identification &amp; support</td></tr>
+        <tr><td>Fan nickname</td><td>When purchased from nickname shop</td><td>Display on profile &amp; challenge cards</td></tr>
+        <tr><td>Favourite teams</td><td>Onboarding &amp; settings</td><td>Personalised scores &amp; notifications</td></tr>
+        <tr><td>Invite code</td><td>When entering a referral code</td><td>Reward attribution</td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.2 Information Collected Automatically</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Prediction history</td><td>Your in-app actions</td><td>Scoring, rankings, streak tracking</td></tr>
+        <tr><td>Challenge records</td><td>Your in-app actions</td><td>Challenge resolution &amp; leaderboards</td></tr>
+        <tr><td>Coin balance &amp; transactions</td><td>Your in-app actions</td><td>Economy management</td></tr>
+        <tr><td>Tier &amp; points</td><td>Calculated by our system</td><td>Progression tracking</td></tr>
+        <tr><td>Login streak</td><td>Daily login events</td><td>Streak rewards</td></tr>
+        <tr><td>FCM device token</td><td>Firebase on first launch</td><td>Push notifications</td></tr>
+        <tr><td>App usage analytics</td><td>Firebase Analytics</td><td>Feature improvement &amp; crash analysis</td></tr>
+        <tr><td>Device information</td><td>Operating system</td><td>Compatibility &amp; performance optimisation</td></tr>
+        <tr><td>Approximate location</td><td>IP address (country-level only)</td><td>Country leaderboard &amp; ad relevance</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box gray">
+      <strong>Guest mode:</strong> If you use the app as a guest without signing in, we collect only anonymous usage data and a temporary device identifier. No email or name is collected. Guest data is not linked across sessions.
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section" id="s2">
+    <div class="section-number">2</div>
+    <h2 class="section-title">How We Use Your Information</h2>
+
+    <p>We use the information we collect for the following purposes:</p>
+
+    <h3>Core App Functionality</h3>
+    <ul class="policy-list">
+      <li>Operating your account and authenticating your identity via Google Sign-In</li>
+      <li>Displaying live scores, match results, and football statistics</li>
+      <li>Processing your daily predictions and calculating your points score</li>
+      <li>Running 1v1 and group challenges between users</li>
+      <li>Managing your FC Coins balance — earning, spending, and transaction history</li>
+      <li>Tracking your tier progression from Rookie to Master</li>
+      <li>Maintaining your prediction streak and Clashers Index</li>
+      <li>Displaying your profile, ranking position, and challenge history</li>
+    </ul>
+
+    <h3>Notifications &amp; Communications</h3>
+    <ul class="policy-list">
+      <li>Sending push notifications for match kickoffs, goal alerts, and results</li>
+      <li>Notifying you when a friend sends or accepts a challenge</li>
+      <li>Alerting you when prediction points are awarded after a match</li>
+      <li>Sending daily mission reminders and prediction reminders (user-configurable)</li>
+      <li>Notifying you of tier upgrades and milestone achievements</li>
+    </ul>
+
+    <h3>Personalisation</h3>
+    <ul class="policy-list">
+      <li>Prioritising your favourite team fixtures on the Scores screen</li>
+      <li>Filtering notifications by your preferred leagues and teams</li>
+      <li>Showing your position in global, country, and friends leaderboards</li>
+    </ul>
+
+    <h3>App Improvement</h3>
+    <ul class="policy-list">
+      <li>Analysing aggregate usage patterns to improve features (via Firebase Analytics)</li>
+      <li>Diagnosing crashes and technical issues</li>
+      <li>Understanding which features drive engagement to prioritise development</li>
+    </ul>
+
+    <h3>Legal Basis for Processing (GDPR)</h3>
+    <p>Where applicable, we process your data under the following legal bases: <strong>contract performance</strong> (to deliver the app services you requested), <strong>legitimate interests</strong> (app improvement, security), <strong>consent</strong> (optional notifications, rewarded ads), and <strong>legal obligation</strong> (compliance with applicable laws).</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section" id="s3">
+    <div class="section-number">3</div>
+    <h2 class="section-title">Data Sharing &amp; Third Parties</h2>
+
+    <p>We do not sell your personal data. We do not share your data with advertisers for direct marketing purposes. We share data only with the service providers below who help us operate the app:</p>
+
+    <div class="third-party-grid">
+      <div class="third-party-card">
+        <div class="vendor-name">Google Firebase</div>
+        <div class="vendor-role">Authentication, database, notifications, analytics</div>
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+      </div>
+      <div class="third-party-card">
+        <div class="vendor-name">Google AdMob</div>
+        <div class="vendor-role">In-app advertising (banner, interstitial, rewarded video)</div>
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Privacy Policy ↗</a>
+      </div>
+      <div class="third-party-card">
+        <div class="vendor-name">Google Play</div>
+        <div class="vendor-role">In-app purchase processing &amp; distribution</div>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+      </div>
+      <div class="third-party-card">
+        <div class="vendor-name">API-Football</div>
+        <div class="vendor-role">Football data: fixtures, scores, lineups, statistics</div>
+        <a href="https://www.api-football.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+      </div>
+    </div>
+
+    <div class="info-box yellow">
+      <strong>Legal disclosures:</strong> We may disclose your information if required by law, court order, or governmental authority, or where necessary to protect the rights, property, or safety of Football Clashers, our users, or the public.
+    </div>
+
+    <h3>Public Profile Information</h3>
+    <p>Your display name, tier badge, Clashers Index, prediction accuracy, and ranking position are visible to other users within the app. You can change your display name from the Menu screen (subject to our 30-day cooldown policy). Your email address is never displayed publicly.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section" id="s4">
+    <div class="section-number">4</div>
+    <h2 class="section-title">Advertising &amp; AdMob</h2>
+
+    <p>Football Clashers uses Google AdMob to display advertisements. AdMob may collect and use data to serve personalised ads based on your interests. Here is how advertising works in our app:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Ad Format</th><th>Placement</th><th>User Control</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Banner ads</td><td>Bottom of Scores and Rankings screens</td><td>Always visible on applicable screens</td></tr>
+        <tr><td>Interstitial ads</td><td>After completed match results; after final daily prediction</td><td>Dismissible — shown at natural break points only</td></tr>
+        <tr><td>Rewarded video ads</td><td>Voluntary "Watch to earn 5 coins" prompt; zero-coins recovery screen</td><td>100% optional — never shown without your explicit tap</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box green">
+      <strong>Rewarded ads are always opt-in.</strong> We never force you to watch an ad to access any core feature. Live scores, predictions, and rankings are all free without watching any ads. Rewarded ads are an optional bonus for earning FC Coins.
+    </div>
+
+    <h3>Ad Personalisation &amp; Opt-Out</h3>
+    <p>Google AdMob may use your advertising ID and usage data to serve relevant ads. You can opt out of personalised advertising at any time by visiting your Android device settings:</p>
+    <ul class="policy-list">
+      <li>Go to <strong>Settings → Google → Ads</strong></li>
+      <li>Enable <strong>"Opt out of Ads Personalisation"</strong></li>
+    </ul>
+    <p>You can also reset your advertising ID from the same menu. Opting out does not remove ads — it means ads will be less relevant to your interests.</p>
+
+    <p>For more information on how Google uses data from apps that use AdMob, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" style="color: var(--green);">google.com/policies/privacy/partners</a></p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section" id="s5">
+    <div class="section-number">5</div>
+    <h2 class="section-title">FC Coins &amp; In-App Purchases</h2>
+
+    <h3>FC Coins</h3>
+    <p>FC Coins are a virtual in-app currency with no real-world monetary value. They cannot be transferred between users, exchanged for real money, or redeemed outside of Football Clashers. FC Coins are used solely to participate in challenges and purchase cosmetic items within the app.</p>
+
+    <h3>In-App Purchases</h3>
+    <p>All in-app purchases (coin packages) are processed exclusively by <strong>Google Play</strong>. We do not collect, store, or process your payment card information. All payment data is handled by Google in accordance with their privacy policy and payment terms. Purchases are final and non-refundable except as required by applicable law or Google Play's refund policy.</p>
+
+    <h3>Challenge Economy</h3>
+    <p>Our challenge system uses an entry-fee model. Coins spent to enter a challenge are a participation fee paid to the app — not a stake wagered against another user. Winners receive a reward from the app's coin reserve. This model is designed to be compliant with applicable platform policies and is not a gambling mechanism.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section" id="s6">
+    <div class="section-number">6</div>
+    <h2 class="section-title">Data Retention</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Type</th><th>Retention Period</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Account profile (name, email, avatar)</td><td>Until you delete your account</td></tr>
+        <tr><td>Predictions &amp; challenge history</td><td>Until you delete your account</td></tr>
+        <tr><td>Coins, tier, and points history</td><td>Until you delete your account</td></tr>
+        <tr><td>FCM device token</td><td>Refreshed automatically; deleted on account deletion</td></tr>
+        <tr><td>Firebase Analytics events</td><td>14 months (Google's default — aggregated and anonymised)</td></tr>
+        <tr><td>Guest session data</td><td>90 days of inactivity, then automatically purged</td></tr>
+        <tr><td>Support correspondence</td><td>2 years from last contact</td></tr>
+      </tbody>
+    </table>
+
+    <p>When you request account deletion, we will remove your personal data from active systems within <strong>30 days</strong>. Anonymised, aggregated statistical data (e.g. total predictions processed) may be retained indefinitely as it cannot be linked back to you.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section" id="s7">
+    <div class="section-number">7</div>
+    <h2 class="section-title">Your Rights &amp; Choices</h2>
+
+    <p>Depending on where you are located, you may have the following rights regarding your personal data:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Right</th><th>Description</th><th>How to Exercise</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Access</td><td>Request a copy of the personal data we hold about you</td><td>Email us at the contact below</td></tr>
+        <tr><td>Correction</td><td>Update inaccurate or incomplete data</td><td>Change name from Menu → Profile in-app, or email us</td></tr>
+        <tr><td>Deletion</td><td>Request deletion of your account and all associated data</td><td>Email us — we process within 30 days</td></tr>
+        <tr><td>Portability</td><td>Receive your data in a machine-readable format</td><td>Email us</td></tr>
+        <tr><td>Objection</td><td>Object to processing based on legitimate interests</td><td>Email us</td></tr>
+        <tr><td>Withdraw consent</td><td>Opt out of optional notifications at any time</td><td>Menu → Notification Preferences in-app</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Notification Controls</h3>
+    <p>You can control every notification type individually from the Menu screen under Notification Preferences. You can disable: match kickoff reminders, goal alerts, prediction result alerts, challenge notifications, daily mission reminders, and ranking change alerts. Tier upgrade notifications are always on as they are directly triggered by your own activity.</p>
+
+    <h3>Account Deletion</h3>
+    <p>To delete your account and all associated data, email us at <strong>rmalkawi99@gmail.com</strong> with the subject line <strong>"Account Deletion Request"</strong> and include your registered email address. We will confirm deletion within 30 days.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section" id="s8">
+    <div class="section-number">8</div>
+    <h2 class="section-title">Children's Privacy</h2>
+
+    <div class="info-box yellow">
+      <strong>Age requirement:</strong> Football Clashers is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal data from children under the age of 13. Users aged 13–17 should have parental or guardian consent before using the app.
+    </div>
+
+    <p>We do not knowingly collect, use, or disclose personal information from children under 13. If we become aware that a child under 13 has provided us with personal data without parental consent, we will take steps to delete such information promptly. If you are a parent or guardian and believe your child has provided us with their personal data, please contact us immediately at <strong>rmalkawi99@gmail.com</strong>.</p>
+
+    <p>Our AdMob integration is configured for general audiences. We do not serve interest-based ads to users we know to be under 13.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section" id="s9">
+    <div class="section-number">9</div>
+    <h2 class="section-title">Data Security</h2>
+
+    <p>We take the security of your data seriously. The following measures are in place:</p>
+    <ul class="policy-list">
+      <li><strong>Firebase Security Rules</strong> — Firestore rules ensure each user can only read and write their own data. No user can access another user's private predictions, coin balance, or challenge details</li>
+      <li><strong>Authentication</strong> — All accounts use Google Sign-In with OAuth 2.0. We never store passwords</li>
+      <li><strong>Encrypted transmission</strong> — All data between the app and our servers is transmitted over HTTPS/TLS</li>
+      <li><strong>Minimal data collection</strong> — We collect only what is necessary to operate the features you use</li>
+      <li><strong>Access control</strong> — Administrative access to Firestore is restricted to authorised developers only</li>
+    </ul>
+
+    <p>While we implement industry-standard security practices, no method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security but are committed to protecting your data using commercially reasonable means.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section" id="s10">
+    <div class="section-number">10</div>
+    <h2 class="section-title">International Data Transfers</h2>
+
+    <p>Football Clashers is operated from Saudi Arabia. Our infrastructure runs on <strong>Google Firebase</strong> (us-central1 region) and <strong>Google Cloud</strong> services, which means your data may be processed on servers located in the United States or other countries.</p>
+
+    <p>By using Football Clashers, you acknowledge that your data may be transferred to and processed in countries outside your country of residence, including countries that may have different data protection standards. Google Firebase complies with applicable international data transfer frameworks, including Standard Contractual Clauses for users in the European Economic Area.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section" id="s11">
+    <div class="section-number">11</div>
+    <h2 class="section-title">Changes to This Policy</h2>
+
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, new features, or applicable laws. When we make material changes, we will:</p>
+    <ul class="policy-list">
+      <li>Update the <strong>"Last updated"</strong> date at the top of this page</li>
+      <li>Send a push notification to all users informing them of significant changes</li>
+      <li>For material changes affecting how we use your data, request renewed consent where required by law</li>
+    </ul>
+
+    <p>We encourage you to review this policy periodically. Your continued use of Football Clashers after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section" id="s12">
+    <div class="section-number">12</div>
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the data we hold about you, please contact us:</p>
+
+    <div class="contact-box">
+      <h3>Football Clashers — Privacy Team</h3>
+      <p>We aim to respond to all privacy-related enquiries within <strong>72 hours</strong>.</p>
+      <a href="mailto:rmalkawi99@gmail.com?subject=Privacy%20Policy%20Enquiry">rmalkawi99@gmail.com</a>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 14px; color: var(--text-light);">
+      When contacting us for data access or deletion requests, please include: your registered email address, the type of request, and your in-app display name to help us locate your account quickly.
+    </p>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <p><strong>Football Clashers</strong> &nbsp;·&nbsp; com.footballclashers.app &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; Effective June 1, 2026</p>
+  <p style="margin-top: 6px;">© 2026 Football Clashers. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
